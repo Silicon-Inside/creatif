@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'about_us.dart';
+import 'event_management.dart';
 import 'contact_us.dart';
+import 'sibpa.dart';
+import 'swipe.dart';
 
 class drawer extends StatefulWidget {
   @override
@@ -58,10 +61,33 @@ class _drawerState extends State<drawer> {
         ),
         ListTile(
           title: Text(
+            'SIBPA 2019',
+            style: TextStyle(fontSize: 20),
+          ),
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => sibpa()));
+          },
+        ),
+        ListTile(
+          title: Text(
+            'Swiper',
+            style: TextStyle(fontSize: 20),
+          ),
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => swipe()));
+          },
+        ),
+        ListTile(
+          title: Text(
             'Upcoming Events',
             style: TextStyle(fontSize: 20),
           ),
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => SimpleTab()));
+          },
         ),
         // Divider(),
         ListTile(

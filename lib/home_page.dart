@@ -68,74 +68,106 @@ class HomePage extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(color: Colors.amber),
+                    decoration: BoxDecoration(color: Colors.black87),
                     child: Row(
                       children: <Widget>[
-                        Icon(Icons.event),
+                        Icon(
+                          Icons.public,
+                          color: Colors.white,
+                          size: 30,
+                        ),
                         Text(
-                          " Upcoming Event",
+                          "  International Summit ",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400, fontSize: 20),
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20),
                         ),
                       ],
                     ),
                   ),
+                  // Padding(
+                  //   padding: EdgeInsets.all(2),
+                  // ),
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                    child: Image(
-                      image: AssetImage("images/image1.png"),
+                    // padding: EdgeInsets.only(top: 5, left: 5, right: 5),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(0),
+                      child: Image(
+                        image: AssetImage("images/image1.png"),
+                      ),
                     ),
                   ),
-                  Divider(
-                    color: Colors.transparent,
-                    height: 2,
-                  ),
-                  Container(
-                    padding: EdgeInsets.all(5),
-                    child: Column(
-                      children: <Widget>[
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 3),
-                          decoration: BoxDecoration(
-                              color: Colors.black,
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(
-                                  color: Colors.transparent,
-                                  style: BorderStyle.none,
-                                  width: 2)),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
-                              Text(
-                                " National Summit ",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 30,
-                                  color: Colors.white,
+                  // Divider(
+                  //   color: Colors.transparent,
+                  //   height: 2,
+                  // ),
+                  ListTile(
+                    contentPadding: EdgeInsets.all(0),
+                    title: Container(
+                      padding: EdgeInsets.all(0),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            // padding: EdgeInsets.all(3),
+                            // margin: EdgeInsets.symmetric(horizontal: 2),
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                    color: Colors.transparent,
+                                    style: BorderStyle.none,
+                                    width: 2)),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: <Widget>[
+                                Container(
+                                  width: double.infinity,
+                                  margin: EdgeInsets.symmetric(horizontal: 5),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(4.0)),
+                                  child: FlatButton(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30)),
+                                    onPressed: () {},
+                                    color: Colors.amber,
+                                    child: Text(
+                                      "      SIBPA 2019      ",
+                                      style: TextStyle(fontSize: 22),
+                                    ),
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                " SIBPA 2019 ",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 30,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
+                                // Chip(
+                                //   label: Text(
+                                //     " SIBPA 2019 ",
+                                //     textAlign: TextAlign.center,
+                                //     style: TextStyle(
+                                //       fontWeight: FontWeight.w700,
+                                //       fontSize: 30,
+                                //       color: Colors.white,
+                                //     ),
+                                //   ),
+                                // ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(bottom: 9),
-                        ),
-                        Divider(
-                          color: Colors.black,
-                          height: 0,
-                        ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                          ),
+                          // Padding(
+                          //   padding: EdgeInsets.all(1),
+                          // ),
+                          // Divider(
+                          //   color: Colors.black,
+                          //   height: 0,
+
+                          // ),
+                          Container(
+                            color: Colors.grey,
+                            height: 1,
+                            width: double.infinity,
+                          )
+                        ],
+                      ),
                     ),
                   ),
 
